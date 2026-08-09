@@ -1,0 +1,282 @@
+/* ==========================================
+   ULTRA-MODERN EDITORIAL SPLIT SECTION (PURE CSS)
+   ========================================== */
+
+:root {
+  --primary-pink: #F28BB6;
+  --dark-pink: #D6457D;
+  --bg-glow: rgba(242, 139, 182, 0.15);
+  --dark-surface: #0F172A;
+  --light-bg: #F8FAFC;
+  --card-border: rgba(0, 0, 0, 0.06);
+  --text-primary: #0F172A;
+  --text-muted: #64748B;
+}
+
+.editorial-section {
+  position: relative;
+  padding: 6.5rem 1.5rem;
+  padding-bottom: 2rem;
+  background-color: var(--light-bg);
+  overflow: hidden;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Background Ambient Elements */
+.editorial-bg-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, var(--bg-glow) 0%, rgba(255, 255, 255, 0) 70%);
+  filter: blur(100px);
+  pointer-events: none;
+}
+
+.editorial-container {
+  max-width: 82rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+@media (min-width: 1024px) {
+  .editorial-container {
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 5rem;
+  }
+}
+
+/* ================= LEFT MEDIA FRAME ================= */
+
+.media-editorial-wrapper {
+  position: relative;
+}
+
+.media-editorial-card {
+  position: relative;
+  border-radius: 32px;
+  background: #FFFFFF;
+  padding: 12px;
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--card-border);
+}
+
+.media-viewport {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  height: 400px;
+}
+
+@media (min-width: 768px) {
+  .media-viewport {
+    height: 480px;
+  }
+}
+
+.media-viewport img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.media-editorial-card:hover .media-viewport img {
+  transform: scale(1.04);
+}
+
+.media-dark-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 30%, rgba(15, 23, 42, 0.6) 100%);
+  pointer-events: none;
+}
+
+/* PLAY WIDGET */
+.play-trigger-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+}
+
+.play-aura {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  display: grid;
+  place-items: center;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.play-center {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* FLOATING GLASS CHIP */
+.floating-glass-chip {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  padding: 0.85rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.12);
+}
+
+.chip-avatar-group {
+  display: flex;
+}
+
+.chip-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid #FFFFFF;
+  margin-left: -10px;
+  background-size: cover;
+  background-position: center;
+}
+
+.chip-avatar:first-child {
+  margin-left: 0;
+}
+
+.chip-title {
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.chip-sub {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* ================= RIGHT CONTENT ================= */
+
+.header-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  border-radius: 99px;
+  background: rgba(242, 139, 182, 0.12);
+  border: 1px solid rgba(242, 139, 182, 0.25);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  color: var(--dark-pink);
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+
+.header-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--text-primary);
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .header-title {
+    font-size: 3.25rem;
+  }
+}
+
+.title-accent {
+  color: var(--dark-pink);
+  font-style: italic;
+}
+
+.header-description {
+  margin-top: 1.25rem;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--text-muted);
+  font-weight: 450;
+  max-width: 34rem;
+}
+
+/* FEATURE BENTO ITEMS */
+.editorial-cards-container {
+  margin-top: 2.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.editorial-item-card {
+  background: #FFFFFF;
+  border: 1px solid var(--card-border);
+  border-radius: 20px;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+}
+
+.editorial-item-card:hover {
+  transform: translateY(-3px) translateX(4px);
+  border-color: rgba(242, 139, 182, 0.4);
+  box-shadow: 0 16px 35px rgba(242, 139, 182, 0.12);
+}
+
+.card-icon-badge {
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  background: rgba(242, 139, 182, 0.12);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  color: var(--dark-pink);
+}
+
+.card-heading {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.card-body {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin: 0.25rem 0 0 0;
+  line-height: 1.5;
+}

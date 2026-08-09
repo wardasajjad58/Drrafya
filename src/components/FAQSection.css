@@ -1,0 +1,192 @@
+/* ==========================================
+   FAQ SECTION STYLES
+   ========================================== */
+
+:root {
+  --faq-bg: linear-gradient(135deg, #FFF7F5 0%, #FAFAFC 40%, #FFF5F2 100%);
+  --faq-accent-orange: var(--rich-pink);
+  --faq-text-dark: #1E293B;
+  --faq-text-muted: #64748B;
+  --faq-card-bg: rgba(255, 255, 255, 0.95);
+  --faq-border-color: rgba(241, 245, 249, 0.8);
+}
+
+.faq-section {
+  position: relative;
+  width: 100%;
+  padding: 5.5rem 1.5rem;
+  padding-top:3rem;
+  background: var(--faq-bg);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  box-sizing: border-box;
+}
+
+.faq-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 3.5rem;
+  align-items: start;
+}
+
+@media (max-width: 992px) {
+  .faq-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+/* LEFT COLUMN - CONTENT & BOOKING CARD */
+.faq-left-col {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.faq-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--faq-text-dark);
+}
+
+.faq-badge-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--faq-accent-orange);
+}
+
+.faq-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--faq-text-dark);
+  line-height: 1.15;
+  letter-spacing: 0;
+  margin: 0.5rem 0 0 0;
+  padding-top:30px;
+}
+
+/* BOOK CALL CARD */
+.faq-booking-card {
+  background: var(--faq-card-bg);
+  border: 1px solid var(--faq-border-color);
+  border-radius: 28px;
+  padding: 2.5rem;
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 10px;
+}
+
+.booking-avatar-wrapper {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.booking-avatar-glow {
+  position: absolute;
+  inset: -10px;
+  background: var(--faq-accent-orange);
+  opacity: 0.15;
+  filter: blur(15px);
+  border-radius: 50%;
+}
+
+.booking-avatar {
+  position: relative;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.booking-card-title {
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: var(--faq-text-dark);
+  margin: 0 0 0.75rem 0;
+}
+
+.booking-card-desc {
+  font-size: 0.925rem;
+  color: var(--faq-text-muted);
+  line-height: 1.55;
+  margin: 0 0 2rem 0;
+  max-width: 320px;
+}
+
+.booking-btn {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 99px;
+  background: var(--rich-pink);
+  color: #FFFFFF;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-decoration: none;
+  text-align: center;
+}
+
+.booking-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* RIGHT COLUMN - ACCORDION LIST */
+.faq-accordion-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.faq-item {
+  background: var(--faq-card-bg);
+  border: 1px solid var(--faq-border-color);
+  border-radius: 20px;
+  padding: 1.35rem 1.75rem;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.015);
+  transition: all 0.25s ease;
+}
+
+.faq-item:hover {
+  border-color: rgb(214, 69, 125);;
+}
+
+.faq-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.faq-question {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--faq-text-dark);
+  margin: 0;
+}
+
+.faq-toggle-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--faq-text-dark);
+  opacity: 0.7;
+  transition: transform 0.25s ease;
+}
+
+.faq-answer {
+  font-size: 0.925rem;
+  line-height: 1.65;
+  color: var(--faq-text-muted);
+  margin-top: 1rem;
+  padding-right: 2rem;
+}

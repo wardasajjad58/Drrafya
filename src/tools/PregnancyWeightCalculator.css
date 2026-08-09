@@ -1,0 +1,435 @@
+.calc-section {
+  width: 100%;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fafbfc;
+}
+
+.calc-container {
+  max-width: 720px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Banner Styling */
+.calc-banner {
+  background: linear-gradient(135deg, #f28bb6 0%, #9c4368 100%);
+  border-radius: 20px;
+  padding: 32px 36px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  box-shadow: 0 12px 30px rgba(139, 92, 246, 0.2);
+  margin-bottom: 28px;
+}
+
+.banner-illustration {
+  flex-shrink: 0;
+}
+
+.illustration-badge {
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.scale-icon {
+  color: #ffffff;
+}
+
+.banner-content {
+  flex: 1;
+}
+
+.banner-title {
+  font-size: 1.85rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+
+.banner-desc {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  opacity: 0.92;
+  font-weight: 400;
+}
+
+/* Main Form Card */
+.calc-card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.03);
+  border: 1px solid #f1f5f9;
+}
+
+.calc-form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* Unit Toggle */
+.unit-toggle-wrapper {
+  display: flex;
+  background-color: #f1f5f9;
+  border-radius: 9999px;
+  padding: 4px;
+  max-width: 380px;
+  margin: 0 auto 12px auto;
+  width: 100%;
+}
+
+.unit-btn {
+  flex: 1;
+  padding: 10px 16px;
+  border: none;
+  background: transparent;
+  border-radius: 9999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #64748b;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.unit-btn.active {
+  background-color: #ffffff;
+  color: #0f172a;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Form Controls */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-label {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.form-input {
+  width: 100%;
+  padding: 14px 18px;
+  background-color: #ffffff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  color: #0f172a;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-input::placeholder {
+  color: #94a3b8;
+}
+
+.form-input:focus {
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.1);
+}
+
+/* Custom Select Icon */
+.select-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.custom-select {
+  appearance: none;
+  cursor: pointer;
+}
+
+.select-icon {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #64748b;
+  pointer-events: none;
+}
+
+/* Dual Inputs Grid */
+.dual-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* Custom Checkbox */
+.checkbox-group {
+  margin-top: 4px;
+}
+
+.custom-checkbox {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  padding-left: 32px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.custom-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 20px;
+  width: 20px;
+  background-color: #ffffff;
+  border: 2px solid #cbd5e1;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.custom-checkbox:hover input ~ .checkmark {
+  border-color: #14b8a6;
+}
+
+.custom-checkbox input:checked ~ .checkmark {
+  background-color: var(--rich-pink);
+  border-color: var(--rich-pink);
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.custom-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkbox-text {
+  font-size: 0.95rem;
+  color: #334155;
+  font-weight: 500;
+}
+
+/* Submit CTA */
+.calc-action {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.calc-submit-btn {
+  background-color: var(--rich-pink);
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 12px 48px;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.calc-submit-btn:hover {
+  background-color: var(--rich-pink);
+}
+
+/* Responsive Styles */
+@media (max-width: 640px) {
+  .calc-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 24px 20px;
+  }
+
+  .calc-card {
+    padding: 24px 20px;
+  }
+
+  .banner-title {
+    font-size: 1.4rem;
+  }
+}
+
+
+/* Addition to PregnancyWeightCalculator.css for Calculation Results Display */
+
+.calc-error-banner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #dc2626;
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Results Section Styling */
+.result-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 28px;
+}
+
+.result-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.result-check-icon {
+  color: var(--rich-pink);
+  margin-bottom: 4px;
+}
+
+.result-header h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.result-week-subtitle {
+  font-size: 0.95rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+/* Results Grid Display */
+.result-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  width: 100%;
+}
+
+.result-card-item {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 20px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.result-card-item.highlight {
+  background: #f3e2ea;
+  border-color: #ccfbf1;
+}
+
+.res-label {
+  font-size: 0.825rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #64748b;
+}
+
+.res-value {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.res-value.main {
+  font-size: 1.6rem;
+  color: #000;
+}
+
+.res-sub {
+  font-size: 0.85rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+/* Status Badges */
+.res-status-pill {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  margin-top: 4px;
+}
+
+.res-status-pill.on_track {
+  background-color: #dcfce7;
+  color: #15803d;
+}
+
+.res-status-pill.below {
+  background-color: #fef9c3;
+  color: #a16207;
+}
+
+.res-status-pill.above {
+  background-color: #fee2e2;
+  color: #000;
+}
+
+/* Recalculate Button */
+.result-footer-action {
+  margin-top: 8px;
+}
+
+.recalculate-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #f1f5f9;
+  color: #334155;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 10px 24px;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.recalculate-btn:hover {
+  background-color: #e2e8f0;
+  color: #0f172a;
+}
+
+/* Responsive adjustment */
+@media (max-width: 640px) {
+  .result-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}

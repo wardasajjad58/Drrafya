@@ -1,0 +1,226 @@
+/* =========================================================
+   CONFIGURABLE VARS
+   ========================================================= */
+:root {
+  --navbar-max-width: 1370px; /* Change this value to control max width */
+  --navbar-width: 100%;        /* Responsive width on smaller screens */
+  --navbar-top-spacing: 16px; /* Top distance when sticky */
+}
+
+/* Container Floating Header (Centered) */
+.navbar-header {
+  position: sticky;
+  top: var(--navbar-top-spacing);
+  z-index: 50;
+  width: var(--navbar-width);
+  max-width: var(--navbar-max-width);
+  margin-left: auto;  /* Centers the header horizontally */
+  margin-right: auto; /* Centers the header horizontally */
+  margin-bottom:15px;
+}
+
+/* Outer Pill Shell */
+.navbar-container {
+  background-color: #ffffff;
+  border-radius: 9999px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  border: 1px solid #f1f5f9;
+  padding: 0 24px;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+}
+
+/* Brand Section */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.brand-icon {
+  width: 28px;
+  height: 28px;
+  color: #2563eb;
+}
+
+.brand-title {
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: -0.02em;
+  color: #0f172a;
+}
+
+/* Center Pill Nav Bar */
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  background-color: #f8f9fc;
+  border-radius: 9999px;
+  padding: 5px;
+  border: 1px solid #f1f5f9;
+  font-size: 14px;
+  font-weight: 500;
+  color: #475569;
+}
+
+@media (max-width: 1024px) {
+  .navbar-menu {
+    display: none;
+  }
+}
+
+/* Individual Pill Tabs */
+.nav-tab {
+  padding: 8px 18px;
+  border-radius: 9999px;
+  text-decoration: none;
+  color: #475569;
+  transition: all 0.2s ease;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  outline: none;
+}
+
+.nav-tab:hover {
+  color: #0f172a;
+}
+
+.nav-tab.active {
+  background-color: #ffffff;
+  color: #0f172a;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Dropdown Arrow Icon */
+.chevron-icon {
+  color: #94a3b8;
+  transition: transform 0.2s ease;
+}
+
+.chevron-icon.rotate {
+  transform: rotate(180deg);
+}
+
+/* Dropdown Wrapper & Card */
+.dropdown-wrapper {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  margin-top: 12px;
+  z-index: 50;
+  background-color: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #f1f5f9;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+  padding: 8px;
+  width: 260px;
+}
+
+.dropdown-item {
+  display: block;
+  border-radius: 12px;
+  padding: 10px 14px;
+  text-decoration: none;
+  transition: background-color 0.15s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #f8fafc;
+}
+
+.dropdown-item-title {
+  font-weight: 600;
+  font-size: 13.5px;
+  color: #0f172a;
+  margin: 0;
+}
+
+.dropdown-item-desc {
+  font-size: 12px;
+  color: #64748b;
+  margin-top: 2px;
+}
+
+/* Sign Up Button */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 12px;
+}
+
+.lang-switcher-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 9999px;
+  padding: 0 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+.lang-switcher-wrapper:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.lang-icon {
+  color: #64748b;
+  margin-right: 4px;
+  pointer-events: none;
+}
+
+.language-switcher {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #0f172a;
+  outline: none;
+  padding: 8px 2px;
+}
+
+.language-switcher option {
+  background: #ffffff;
+  color: #0f172a;
+}
+
+
+.signup-btn {
+  background-color: var(--rich-pink);
+  color: #ffffff;
+  border-radius: 9999px;
+  padding: 10px 24px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.25);
+  transition: all 0.2s ease;
+  display: inline-block;
+}
+.home-logo {
+  width: 45px;
+}
+
+.signup-btn:hover {
+  background-color: var(--liquid-gold);
+}

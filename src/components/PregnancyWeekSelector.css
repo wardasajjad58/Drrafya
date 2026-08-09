@@ -1,0 +1,224 @@
+/* ==========================================
+   LUXURY EDITORIAL PREGNANCY WEEK SELECTOR
+   ========================================== */
+
+:root {
+  --pw-pink: #D6457D;
+  --pw-pink-dark: #9E1F4E;
+  --pw-gold: var(--rich-pink);
+  --pw-text-dark: #0F172A;
+  --pw-text-muted: #64748B;
+  --pw-card-bg: rgba(255, 255, 255, 0.95);
+  --pw-border: rgba(241, 245, 249, 0.9);
+}
+
+.pw-section {
+  position: relative;
+  width: 100%;
+  padding: 4.5rem 1.5rem;
+
+  background: linear-gradient(135deg, #FFF7F9 0%, #FAFAFC 50%, #FFFBEB 100%);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.pw-container {
+  max-width: 78rem;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* HEADER */
+.pw-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.pw-badge-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1.1rem;
+  background: rgba(214, 69, 125, 0.08);
+  border-radius: 99px;
+  margin-bottom: 1rem;
+}
+
+.pw-badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--pw-pink);
+}
+
+.pw-badge-text {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  color: var(--pw-pink);
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.pw-title {
+  margin: 0;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--pw-text-dark);
+  letter-spacing: 0em;
+}
+
+@media (min-width: 768px) {
+  .pw-title {
+    font-size: 2.75rem;
+  }
+}
+
+.pw-title-accent {
+  background: linear-gradient(135deg, var(--pw-pink) 0%, var(--pw-pink-dark) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* CAROUSEL WRAPPER */
+.pw-carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* NAVIGATION BUTTONS */
+.pw-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 1px solid var(--pw-border);
+  color: var(--pw-text-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.pw-nav-btn:hover {
+  background: var(--pw-pink);
+  color: #FFFFFF;
+  border-color: var(--pw-pink);
+  box-shadow: 0 12px 28px rgba(214, 69, 125, 0.35);
+}
+
+.pw-nav-btn-left {
+  left: -20px;
+}
+
+.pw-nav-btn-right {
+  right: -20px;
+}
+
+@media (max-width: 768px) {
+  .pw-nav-btn-left {
+    left: -10px;
+  }
+  .pw-nav-btn-right {
+    right: -10px;
+  }
+}
+
+/* CAROUSEL TRACK */
+.pw-carousel-track {
+  display: flex;
+  gap: 1.15rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 1.5rem 0.5rem;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+.pw-carousel-track::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+/* CARD ITEM */
+.pw-card {
+  flex: 0 0 140px;
+  background: var(--pw-card-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--pw-border);
+  border-radius: 22px;
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.02);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+}
+
+.pw-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(214, 69, 125, 0.3);
+  box-shadow: 0 16px 32px rgba(214, 69, 125, 0.1);
+}
+
+/* ACTIVE SELECTED CARD */
+.pw-card.active {
+  background: #FFFFFF;
+  border-color: var(--pw-gold);
+  box-shadow: 0 18px 36px rgba(204, 163, 49, 0.22),
+              0 0 0 2px var(--pw-gold);
+  transform: translateY(-6px) scale(1.03);
+}
+
+.pw-icon-container {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: rgba(214, 69, 125, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.65rem;
+  margin-bottom: 1rem;
+  transition: transform 0.25s ease;
+}
+
+.pw-card.active .pw-icon-container {
+  background: rgba(204, 163, 49, 0.12);
+}
+
+.pw-card:hover .pw-icon-container {
+  transform: scale(1.1);
+}
+
+.pw-week-title {
+  font-size: 0.875rem;
+  font-weight: 800;
+  color: var(--pw-text-dark);
+  margin: 0;
+  line-height: 1.35;
+}
+
+.pw-size-hint {
+  font-size: 0.725rem;
+  font-weight: 600;
+  color: var(--pw-text-muted);
+  margin-top: 0.35rem;
+  margin-bottom: 0;
+}
+
+.pw-card.active .pw-size-hint {
+  color: var(--pw-pink);
+  font-weight: 700;
+}
