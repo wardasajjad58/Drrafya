@@ -142,7 +142,7 @@ const toolsData = [
     title: "IVF Due Date Calculator",
     description: "Precise date calculations tailored specifically for IVF transfer dates.",
     Illustration: IvfIcon,
-    href: "#ivf-calculator",
+    href: "/ivf-due-date-calculator",
   },
   {
     id: "birth-chart",

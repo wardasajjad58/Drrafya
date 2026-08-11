@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,500;0,600;0,700;0,800;1,700;1,800&family=Inter:wght@400;500;600&display=swap');
+
+.ivf-wrap {
+  --paper: #F6F6FA;
+  --paper-2: #FFFFFF;
+  --ink: #17162B;
+  --ink-soft: #6B7280;
+  --rose: #D6376E;
+  --rose-deep: #B32A5C;
+  --rose-soft: #FBE3EC;
+  --rose-soft-2: #FCEEF3;
+  --line: #ECE8ED;
+  --shadow: 0 10px 30px rgba(23, 22, 43, 0.06);
+
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 56px 28px 80px;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+.ivf-wrap *,
+.ivf-wrap *::before,
+.ivf-wrap *::after {
+  box-sizing: border-box;
+}
+
+/* ---- Eyebrow badge ---- */
+.ivf-eyebrow {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--rose-deep);
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: var(--rose-soft);
+  padding: 8px 16px 8px 12px;
+  border-radius: 999px;
+  margin-bottom: 22px;
+}
+.ivf-eyebrow::before {
+  content: "✦";
+  font-size: 12px;
+  color: var(--rose);
+}
+
+.ivf-h1 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 800;
+  font-size: 46px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0 0 16px;
+  color: var(--ink);
+}
+.ivf-h1 em {
+  font-style: italic;
+  font-weight: 800;
+  color: var(--rose);
+}
+
+.ivf-sub {
+  font-size: 16px;
+  color: var(--ink-soft);
+  max-width: 540px;
+  line-height: 1.6;
+  margin: 0 0 40px;
+}
+
+/* ---- Input card ---- */
+.ivf-card {
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: var(--shadow);
+}
+
+.ivf-field-label {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: var(--ink);
+  margin-bottom: 12px;
+  display: block;
+}
+
+.ivf-segmented {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-bottom: 26px;
+}
+.ivf-segmented button {
+  font-family: 'Inter', sans-serif;
+  font-size: 13.5px;
+  font-weight: 600;
+  padding: 12px 8px;
+  border-radius: 999px;
+  border: 1.5px solid var(--line);
+  background: var(--paper);
+  color: var(--ink-soft);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  line-height: 1.3;
+}
+.ivf-segmented button span {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 10.5px;
+  color: inherit;
+  margin-top: 3px;
+  opacity: 0.7;
+}
+.ivf-segmented button:hover {
+  border-color: var(--rose);
+  color: var(--rose-deep);
+}
+.ivf-segmented button.active {
+  background: var(--rose);
+  border-color: var(--rose);
+  color: #fff;
+}
+.ivf-segmented button.active span {
+  color: #fbdfea;
+  opacity: 1;
+}
+
+.ivf-row {
+  display: flex;
+  gap: 14px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+.ivf-date-field {
+  flex: 1;
+  min-width: 200px;
+}
+.ivf-wrap input[type='date'] {
+  width: 100%;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  padding: 13px 16px;
+  border-radius: 14px;
+  border: 1.5px solid var(--line);
+  background: var(--paper);
+  color: var(--ink);
+}
+.ivf-wrap input[type='date']:focus {
+  outline: none;
+  border-color: var(--rose);
+  box-shadow: 0 0 0 3px var(--rose-soft);
+}
+
+.ivf-calc-btn {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 14.5px;
+  padding: 15px 28px;
+  border-radius: 999px;
+  border: none;
+  background: var(--rose);
+  color: #fff;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: transform 0.12s ease, background 0.15s ease, box-shadow .15s ease;
+  box-shadow: 0 8px 20px rgba(214, 55, 110, 0.28);
+}
+.ivf-calc-btn:hover {
+  background: var(--rose-deep);
+}
+.ivf-calc-btn:active {
+  transform: scale(0.98);
+}
+.ivf-calc-btn:focus-visible {
+  outline: 2px solid var(--rose-deep);
+  outline-offset: 2px;
+}
+
+.ivf-err {
+  font-family: 'Inter', sans-serif;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--rose-deep);
+  margin-top: 10px;
+  min-height: 16px;
+}
+
+/* ---- Result / stamp ---- */
+.ivf-result {
+  margin-top: 44px;
+}
+.ivf-stamp {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 30px 32px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: var(--paper-2);
+  box-shadow: var(--shadow);
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+.ivf-stamp-ring {
+  width: 64px;
+  height: 64px;
+  flex: 0 0 auto;
+  border-radius: 999px;
+  background: var(--rose-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--rose);
+}
+.ivf-stamp-ring svg {
+  width: 28px;
+  height: 28px;
+}
+.ivf-stamp-text .k {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: 6px;
+}
+.ivf-stamp-text .due {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--ink);
+  line-height: 1.15;
+}
+.ivf-stamp-text .progress {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: var(--ink-soft);
+  margin-top: 6px;
+}
+.ivf-note {
+  font-family: 'Inter', sans-serif;
+  font-size: 12.5px;
+  color: var(--ink-soft);
+  line-height: 1.6;
+  margin: 16px 4px 0;
+  padding: 12px 16px;
+  background: var(--rose-soft-2);
+  border-radius: 12px;
+  display: inline-block;
+}
+
+/* ---- Timeline (feature-card style) ---- */
+.ivf-timeline-wrap {
+  margin-top: 52px;
+}
+.ivf-timeline-head {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: 20px;
+}
+.ivf-arc {
+  position: relative;
+}
+.ivf-arc svg {
+  display: none;
+}
+.ivf-milestones {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+.ivf-milestones .m {
+  text-align: left;
+  padding: 20px;
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+.ivf-milestones .m .dot {
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  background: var(--rose-soft);
+  margin: 0 0 14px;
+  position: static;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ivf-milestones .m .dot::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--ink-soft);
+  opacity: 0.35;
+}
+.ivf-milestones .m.past .dot::after {
+  background: var(--rose);
+  opacity: 1;
+}
+.ivf-milestones .m.today .dot {
+  background: var(--rose);
+}
+.ivf-milestones .m.today .dot::after {
+  background: #fff;
+  opacity: 1;
+}
+.ivf-milestones .m .wk {
+  font-family: 'Inter', sans-serif;
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--rose-deep);
+  margin-top: 0;
+}
+.ivf-milestones .m .label {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-top: 4px;
+  line-height: 1.3;
+}
+.ivf-milestones .m .date {
+  font-family: 'Inter', sans-serif;
+  font-size: 12.5px;
+  color: var(--ink-soft);
+  margin-top: 4px;
+}
+
+@media (max-width: 720px) {
+  .ivf-h1 {
+    font-size: 32px;
+  }
+  .ivf-milestones {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 480px) {
+  .ivf-milestones {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ivf-footer {
+  margin-top: 56px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+  font-size: 12.5px;
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ivf-wrap * {
+    transition: none !important;
+    animation: none !important;
+  }
+}

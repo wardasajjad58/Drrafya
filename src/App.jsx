@@ -18,6 +18,7 @@ import Ovulationcalculator from './tools/OvulationCalculator.jsx';
 import Duedatecalculator from './tools/PregnancyCalculator.jsx';
 import PregnancyWeighgainercalculator from './tools/PregnancyWeightCalculator.jsx';
 import ConceptionDateCalculator from './tools/ConceptionDateCalculator.jsx';
+import IVFDueDateCalculator from './tools/IVFDueDateCalculator.jsx';
 import "./i18n";
 
 
@@ -55,6 +56,7 @@ export default function App() {
           <Route path="/due-date-calculator" element={<Duedatecalculator/>}></Route>
           <Route path="/pregnancy-weight-gain-calculator" element={<PregnancyWeighgainercalculator/>}></Route>
           <Route path="/conception-date-calculator" element={<ConceptionDateCalculator/>}></Route>
+          <Route path="/ivf-due-date-calculator" element={<IVFDueDateCalculator />} />
           <Route></Route>
 
           <Route path="*" element={<div className="p-10 font-bold">Page not found</div>} />
