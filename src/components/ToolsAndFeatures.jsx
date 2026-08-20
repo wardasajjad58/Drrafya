@@ -121,7 +121,7 @@ const toolsData = [
     title: "Chinese Gender Predictor",
     description: "A fun traditional chart to predict your baby's gender using birth dates.",
     Illustration: GenderPredictorIcon,
-    href: "#gender-predictor",
+    href: "/chinese-gender-predictor",
   },
   {
     id: "feeding-tracker",

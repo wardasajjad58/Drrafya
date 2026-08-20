@@ -1,0 +1,343 @@
+.cgp-wrap {
+  --bg-light: #F6F6FA;
+  --bg-white: #FFFFFF;
+  --text-dark: #17162B;
+  --text-soft: #6B7280;
+  --pink: #D6376E;
+  --pink-deep: #B32A5C;
+  --pink-light: #FBE3EC;
+  --pink-lighter: #FCEEF3;
+  --blue: #3D6FD1;
+  --blue-light: #E4ECFC;
+  --border-color: #ECE8ED;
+  --box-shadow: 0 10px 30px rgba(23, 22, 43, 0.06);
+
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 56px 28px 80px;
+  background: var(--bg-light);
+  color: var(--text-dark);
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  text-align: center; /* centers everything inside */
+}
+
+.cgp-wrap *,
+.cgp-wrap *::before,
+.cgp-wrap *::after {
+  box-sizing: border-box;
+}
+
+/* ---- the little badge on top ---- */
+.cgp-eyebrow {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--pink-deep);
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: var(--pink-light);
+  padding: 8px 16px 8px 12px;
+  border-radius: 999px;
+  margin-bottom: 22px;
+}
+.cgp-eyebrow::before {
+  content: "✦";
+  font-size: 12px;
+  color: var(--pink);
+}
+
+.cgp-h1 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 800;
+  font-size: 46px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0 0 16px;
+  color: var(--text-dark);
+  text-align: center; /* explicitly center the heading */
+}
+.cgp-h1 em {
+  font-style: italic;
+  font-weight: 800;
+  color: var(--pink);
+}
+
+.cgp-sub {
+  font-size: 16px;
+  color: var(--text-soft);
+  max-width: 560px;
+  line-height: 1.6;
+  margin: 0 auto 40px; /* centered with auto margins */
+  text-align: center;
+}
+
+/* ---- the main card ---- */
+.cgp-card {
+  background: var(--bg-white);
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: var(--box-shadow);
+  text-align: left; /* reset to left for form elements */
+}
+
+.cgp-field-label {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+  display: block;
+}
+
+/* segmented control - i like this pattern */
+.cgp-segmented {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 26px;
+}
+.cgp-segmented-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+.cgp-segmented button {
+  font-family: 'Inter', sans-serif;
+  font-size: 13.5px;
+  font-weight: 600;
+  padding: 12px 8px;
+  border-radius: 999px;
+  border: 1.5px solid var(--border-color);
+  background: var(--bg-light);
+  color: var(--text-soft);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.cgp-segmented button:hover {
+  border-color: var(--pink);
+  color: var(--pink-deep);
+}
+.cgp-segmented button.active {
+  background: var(--pink);
+  border-color: var(--pink);
+  color: #fff;
+}
+
+/* date inputs in a row */
+.cgp-row {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
+}
+.cgp-date-field {
+  flex: 1;
+  min-width: 200px;
+}
+.cgp-wrap input[type='date'] {
+  width: 100%;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  padding: 13px 16px;
+  border-radius: 14px;
+  border: 1.5px solid var(--border-color);
+  background: var(--bg-light);
+  color: var(--text-dark);
+}
+.cgp-wrap input[type='date']:focus {
+  outline: none;
+  border-color: var(--pink);
+  box-shadow: 0 0 0 3px var(--pink-light);
+}
+
+/* the main action button */
+.cgp-calc-btn {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 14.5px;
+  padding: 15px 28px;
+  border-radius: 999px;
+  border: none;
+  background: var(--pink);
+  color: #fff;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: transform 0.12s ease, background 0.15s ease;
+  box-shadow: 0 8px 20px rgba(214, 55, 110, 0.28);
+  display: inline-block; /* allows text-align center to work */
+}
+.cgp-calc-btn:hover {
+  background: var(--pink-deep);
+}
+.cgp-calc-btn:active {
+  transform: scale(0.98);
+}
+.cgp-calc-btn:focus-visible {
+  outline: 2px solid var(--pink-deep);
+  outline-offset: 2px;
+}
+
+/* error states */
+.cgp-err {
+  font-family: 'Inter', sans-serif;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--pink-deep);
+  margin-top: 12px;
+  background: var(--pink-lighter);
+  border-radius: 10px;
+  padding: 10px 14px;
+}
+
+.cgp-warning {
+  font-family: 'Inter', sans-serif;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: #8A6216;
+  background: #FDF3DC;
+  border-radius: 10px;
+  padding: 10px 14px;
+  margin: 14px 4px 0;
+  line-height: 1.5;
+}
+
+/* ---- the result section ---- */
+.cgp-result {
+  margin-top: 44px;
+  text-align: left; /* reset for content */
+}
+.cgp-stamp {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 30px 32px;
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+  background: var(--bg-white);
+  box-shadow: var(--box-shadow);
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+  justify-content: center; /* centers on smaller screens */
+}
+.cgp-stamp-ring {
+  width: 68px;
+  height: 68px;
+  flex: 0 0 auto;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cgp-stamp-ring svg {
+  width: 30px;
+  height: 30px;
+}
+.cgp-stamp-ring.boy {
+  background: var(--blue-light);
+  color: var(--blue);
+}
+.cgp-stamp-ring.girl {
+  background: var(--pink-light);
+  color: var(--pink);
+}
+.cgp-stamp-text .k {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+  margin-bottom: 6px;
+}
+.cgp-stamp-text .due {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--text-dark);
+  line-height: 1.15;
+}
+.cgp-stamp-text .progress {
+  font-family: 'Inter', sans-serif;
+  font-size: 13.5px;
+  color: var(--text-soft);
+  margin-top: 6px;
+  max-width: 460px;
+  line-height: 1.5;
+}
+
+/* ---- the info cards at the bottom ---- */
+.cgp-facts {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+.cgp-facts .f {
+  background: var(--bg-white);
+  border: 1px solid var(--border-color);
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: var(--box-shadow);
+  text-align: left;
+}
+.cgp-facts .f .dot {
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  background: var(--pink-light);
+  margin-bottom: 12px;
+}
+.cgp-facts .f .label {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 4px;
+}
+.cgp-facts .f .note {
+  font-family: 'Inter', sans-serif;
+  font-size: 12.5px;
+  color: var(--text-soft);
+  line-height: 1.5;
+}
+
+/* making it work on smaller screens */
+@media (max-width: 720px) {
+  .cgp-h1 {
+    font-size: 32px;
+  }
+  .cgp-facts {
+    grid-template-columns: 1fr;
+  }
+  .cgp-stamp {
+    flex-direction: column;
+    text-align: center;
+  }
+  .cgp-stamp-text .progress {
+    max-width: 100%;
+  }
+}
+
+/* footer with the disclaimer */
+.cgp-footer {
+  margin-top: 56px;
+  padding-top: 22px;
+  border-top: 1px solid var(--border-color);
+  font-size: 12.5px;
+  color: var(--text-soft);
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* respecting user preferences */
+@media (prefers-reduced-motion: reduce) {
+  .cgp-wrap * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
