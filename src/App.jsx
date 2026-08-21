@@ -20,6 +20,7 @@ import PregnancyWeighgainercalculator from './tools/PregnancyWeightCalculator.js
 import ConceptionDateCalculator from './tools/ConceptionDateCalculator.jsx';
 import IVFDueDateCalculator from './tools/IVFDueDateCalculator.jsx';
 import Chinesegenderpredictor from './tools/Chinesegenderpredictor.jsx';
+import Birthchartcalculator from './tools/Birthchartcalculator.jsx';
 import "./i18n";
 
 
@@ -59,6 +60,7 @@ export default function App() {
           <Route path="/conception-date-calculator" element={<ConceptionDateCalculator/>}></Route>
           <Route path="/ivf-due-date-calculator" element={<IVFDueDateCalculator />} />
           <Route path="/chinese-gender-predictor" element={<Chinesegenderpredictor />} />
+          <Route path="/birth-chart-calculator" element={<Birthchartcalculator />} />
           <Route></Route>
 
           <Route path="*" element={<div className="p-10 font-bold">Page not found</div>} />

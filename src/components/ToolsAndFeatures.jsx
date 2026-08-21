@@ -149,7 +149,7 @@ const toolsData = [
     title: "Birth Chart Calculator",
     description: "Discover astrological insights and birth alignment details for your newborn.",
     Illustration: BirthChartIcon,
-    href: "#birth-chart-calculator",
+    href: "/birth-chart-calculator",
   },
 ];
 
